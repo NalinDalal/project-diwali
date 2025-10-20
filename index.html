@@ -1,10 +1,89 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+      charset="UTF-8"
+    />
+    <title>Happy Diwali! 🪔</title>
+
+    <!-- p5.js libraries -->
     <script src="https://cdn.jsdelivr.net/npm/p5@1.11.10/lib/p5.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/p5@1.11.10/lib/addons/p5.sound.min.js"></script>
+
+    <!-- Styles -->
     <link rel="stylesheet" type="text/css" href="style.css" />
-    <meta charset="utf-8" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        overflow: hidden;
+        background: linear-gradient(
+          to bottom,
+          #0a0e27 0%,
+          #1a1447 50%,
+          #2d1b4e 100%
+        );
+        font-family: "Georgia", serif;
+      }
+
+      #info {
+        position: absolute;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        color: #ffd700;
+        text-align: center;
+        z-index: 100;
+        text-shadow: 0 0 20px rgba(255, 215, 0, 0.8);
+        pointer-events: none;
+      }
+
+      #info h1 {
+        font-size: 3em;
+        margin-bottom: 10px;
+        animation: glow 2s ease-in-out infinite;
+      }
+
+      #info p {
+        font-size: 1.2em;
+        color: #ffb347;
+      }
+
+      @keyframes glow {
+        0%,
+        100% {
+          text-shadow:
+            0 0 20px rgba(255, 215, 0, 0.8),
+            0 0 40px rgba(255, 140, 0, 0.6);
+        }
+        50% {
+          text-shadow:
+            0 0 30px rgba(255, 215, 0, 1),
+            0 0 60px rgba(255, 140, 0, 0.8);
+        }
+      }
+
+      #controls {
+        position: absolute;
+        bottom: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+        color: white;
+        font-size: 0.9em;
+        text-align: center;
+        z-index: 100;
+        background: rgba(0, 0, 0, 0.5);
+        padding: 15px 30px;
+        border-radius: 10px;
+        backdrop-filter: blur(10px);
+      }
+    </style>
   </head>
   <body>
     <main></main>
